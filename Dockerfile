@@ -5,7 +5,7 @@ FROM kalilinux/kali-rolling
 
 ENV DEBIAN_FRONTEND noninteractive
 # do APT update
-RUN apt-get -y update && apt-get -y dist-upgrade && apt-get -y autoremove && apt-get clean
+RUN apt-get -y update && apt-get -y upgrade  && apt-get -y dist-upgrade && apt-get -y autoremove && apt-get clean
 # install Kali Linux "Top 10" metapackage and a couple "nice to have" tools
 RUN apt-get -y install kali-tools-top10 exploitdb man-db dirb nikto wpscan uniscan smbclient ftp.app inetutils-tools net-tools iputils-ping telnet hping3 traceroute
 
